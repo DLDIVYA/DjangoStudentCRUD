@@ -1,4 +1,4 @@
-Implementation of API Endpoints using Flask
+Implementation of API Endpoints using Django for a Student CRUD
 
 Here we try to implement a basic user management system with the help of Api Endpoints
 
@@ -32,6 +32,8 @@ Now check if server is up and running:
 Create a new app:
 - python manage.py startapp student
 
+Register the app in settings.py in installed_apps
+
 Add urls of the specific app student in urls.py:
 - path ("student/", include("student.urls"))
 
@@ -39,6 +41,17 @@ Create the table schema in models.py
 - python manage.py makemigrations
 - python manage.py migrate
 
-Then exceute and test endpoints:
+Then exceute and test endpoints using postman:
 - python manage.py runserver
 
+GET http://127.0.0.1:8000/student/details/
+POST http://127.0.0.1:8000/student/details/
+{
+"name":"sample name",
+"age": 20,
+"email": "name@gmail.com",
+"course": "cse"
+}
+DELETE http://127.0.0.1:8000/student/details/<int:id>
+PUT http://127.0.0.1:8000/student/details/<int:id>
+PATCH http://127.0.0.1:8000/student/details/<int:id>

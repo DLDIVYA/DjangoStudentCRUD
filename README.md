@@ -45,13 +45,19 @@ Then exceute and test endpoints using postman:
 - python manage.py runserver
 
 GET http://127.0.0.1:8000/student/details/
+
 POST http://127.0.0.1:8000/student/details/
+
 {
 "name":"sample name",
 "age": 20,
 "email": "name@gmail.com",
 "course": "cse"
 }
+
 DELETE http://127.0.0.1:8000/student/details/<int:id>
+
 PUT http://127.0.0.1:8000/student/details/<int:id>
+
 PATCH http://127.0.0.1:8000/student/details/<int:id>
+
